@@ -44,32 +44,40 @@
         }
 
         /* Header Styles & Co-Branding */
-        .header {
-            padding: 30px 20px;
+        .main-header {
+            text-align: center;
+            margin-bottom: 30px;
             background: linear-gradient(180deg, rgba(244, 237, 220, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
             border-bottom: 1px solid rgba(43, 34, 20, 0.05);
+            width: 100%;
         }
 
-        .logos-container {
+        /* Top Bar for Sponsors & Hosts Logos */
+        .sponsors-bar {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
             gap: 15px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
+            width: 100%;
+            max-width: 800px;
+            padding: 0 20px;
         }
 
-        .logo-box {
-            flex: 1;
-            min-width: 120px;
+        /* A Sponsor / Host Logo */
+        .sponsors-bar img {
+            height: 30px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.65;
+        }
+
+        .main-logo {
+            width: 100px;
             max-width: 180px;
-            padding: 10px;
-            border-radius: 8px;
-            background: rgba(244, 237, 220, 0.2);
-            border: 1px dashed rgba(163, 138, 94, 0.3);
-            font-size: 0.85rem;
-            color: #7a6e5d;
-            font-weight: bold;
+            height: auto;
+            margin: 0 auto 15px auto;
+            display: block;
+            opacity: 0.85;
         }
 
         .program-tag {
@@ -256,30 +264,25 @@
     <div class="container">
         
         <!-- Header & Brand Architecture -->
-        <div class="header">
-            <div class="logos-container">
-                <!-- מארחת -->
-                <div class="logo-box">
-                    <div style="color: var(--accent-teal); font-size: 0.9rem; margin-bottom: 4px;">בית מדרש קהילתי</div>
-                    <div style="color: var(--accent-green); font-size: 0.95rem; font-weight: 800;">נווה מנחם</div>
-                    <div style="font-size: 0.7rem; color: #a19584; margin-top: 5px; font-weight: normal; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 3px;">עמותה מארחת</div>
-                </div>
-                <!-- מפעילה -->
-                <div class="logo-box">
-                    <div style="font-size: 1.05rem; letter-spacing: 0.5px; color: #5a4b33;">צָרִי גִלְעָד</div>
-                    <div style="font-size: 0.65rem; color: #9c8e7a; font-weight: normal;">לזכר גלעד סירי (ע"ר)</div>
-                    <div style="font-size: 0.7rem; color: #a19584; margin-top: 5px; font-weight: normal; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 3px;">העמותה המפעילה</div>
-                </div>
+        <!-- הדר מרכזי ממוקד וממורכז -->
+        <header class="main-header">
+            <!-- שורת מארחים וספונסרים עליונה בקטן -->
+            <div class="sponsors-bar">
+                <img src="assets/Logo_BeitMidrashKehilatiNaveKodshecha_with_TSGbg.jpg" alt="בית מדרש קהילתי נווה מנחם - עמותה מארחת">
+                <!-- ספונסרים נוספים בעתיד ייכנסו כאן כאלמנט img נוסף -->
             </div>
+
+            <img src="assets/Logo_TsoriGilad.png" alt="לוגו צרי גלעד" class="main-logo">
             
             <div class="program-tag">תוכנית מארי דרדקי</div>
+            
             <h1>למד בנך מסורת תימן</h1>
             <p class="subtitle">בהגיה ובהטעמה, בנעימה ובדקדוק</p>
-            
+
             <div class="info-pill">
-                <span>📍 מיקום הפעילות: <strong>בית כנסת 'תורת אבות', רח' החלילים 1, נווה מנחם</strong></span>
+                <span>📍 מיקום: <strong>בית כנסת 'תורת אבות', רח' החלילים 1, נווה מנחם</strong></span>
             </div>
-        </div>
+        </header>
 
         <!-- Main Selection Area -->
         <div class="content">
@@ -290,8 +293,8 @@
                 <!-- קבוצה א' ו-ב' -->
                 <a href="YOUR_LINK_FOR_GROUPS_A_B" class="payment-card">
                     <div class="card-details">
-                        <div class="group-title">קבוצות א' ו-ב'</div>
-                        <div class="group-hours">ימים ראשון וחמישי | 16:30-17:00 או 17:00-17:30</div>
+                        <div class="group-title">קבוצות א' \ ב'</div>
+                        <div class="group-hours">ימים ראשון וחמישי | 16:30-17:00 \ 17:00-17:30</div>
                     </div>
                     <div class="card-price">
                         <div class="price-val">₪100</div>
@@ -303,7 +306,7 @@
                 <a href="YOUR_LINK_FOR_GROUP_C" class="payment-card">
                     <div class="card-details">
                         <div class="group-title">קבוצה ג'</div>
-                        <div class="group-hours">ימים ראשון וחמישי | 17:30-18:30 (שעה מלאה)</div>
+                        <div class="group-hours">ימים ראשון וחמישי | 17:30-18:30</div>
                     </div>
                     <div class="card-price">
                         <div class="price-val">₪150</div>
@@ -316,7 +319,7 @@
 
         <!-- Footer Footer Context -->
         <div class="footer">
-            תוכנית "מארי דרדקי" מופעלת ע"י עמותת צרי גלעד (ע"ר) וממוזגת במסגרת פעילות בית מדרש קהילתי נווה מנחם.
+           עמותת 'צרי גלעד' (ע"ר תחת 'בית מדרש קהילתי נווה קדשך') פועלת משנת ה'תשע"ד להנחלת מסורת תימן ותורת ישראל לזכר גלעד סירי נ"ע.
         </div>
 
     </div>
